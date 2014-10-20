@@ -19,11 +19,11 @@ public class UltraSonicSensor extends Thread{
 			distanceMode.fetchSample(value, 0);
 			centimeter = (int) (value[0] * 100);
 			if(centimeter < 32){
-					Motor1.setSpeed(1000);
+					Motor1.setSpeed(500);
 					Motor1.backward();
 					Delay.msDelay(1500);
 					Motor1.stop();
-					Delay.msDelay(500);
+					Delay.msDelay(1000);
 					Motor1.setSpeed(500);
 					Motor1.forward();
 					Delay.msDelay(1500);
